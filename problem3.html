@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Switcher</title>
+</head>
+
+<body>
+    <h3>Problem 3 Image Switcher:</h3>
+    <p>
+        Create an HTML file with an image element and two buttons. Use JavaScript to handle the button click events and
+        switch the image source when a button is clicked. The first button should change the image to "image1.jpg" and
+        the second button should change it to "image2.jpg".
+
+    </p>
+
+    <button id="imgBtn1">Image 1</button>
+    <button id="imgBtn2">Image 2</button>
+    <img id="img" width="500"
+        src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1686&q=80"
+        alt="">
+
+
+    <script>
+        const imageBtn1 = document.getElementById('imgBtn1');
+        const imageBtn2 = document.getElementById('imgBtn2');
+        const image = document.getElementById('img');
+
+        let image1 = 'https://images.unsplash.com/photo-1538128835124-7805d3fd3f43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80'
+        let image2 = 'https://images.unsplash.com/photo-1599582292739-d37615cc7882?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'
+
+        imageBtn1.addEventListener('click', () => {
+            image.setAttribute('src', image1);
+        });
+
+        imageBtn2.addEventListener('click', () => {
+            image.setAttribute('src', image2);
+        });
+    </script>
+</body>
+
+</html>
